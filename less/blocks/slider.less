@@ -1,0 +1,56 @@
+.slider__text {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.slider__author {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 18px;
+}
+
+.slider__author-nickname {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+.slider__control {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width:768px) {
+  .slider {
+    display: flex;
+    flex-wrap: wrap;
+    order: 3;
+  }
+
+  .slider__item {
+    position: relative;
+  }
+
+  .slider__text {
+    margin-top: 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .slider__control {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
