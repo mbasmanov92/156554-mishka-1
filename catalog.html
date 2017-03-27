@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="main-header  main-header--closed  main-header--no-js">
+      <div class="main-header__logo">
+        <a href="#">
+          <img class="main-header__logo-mob" src="/img/logo-mobile.svg" width="86" height="35" alt="mishka">
+          <img class="main-header__logo-tab" src="/img/logo-mobile.svg" width="113" height="46" alt="mishka">
+          <img class="main-header__logo-desk" src="/img/logo-mobile.svg" width="149" height="72" alt="mishka">
+        </a>
+        <button class="main-header__dropdown" type="button"></button>
+      </div>
+      <ul class="main-header__list-1">
+        <li class="main-header__item  main-header__item--catalog">
+          <a class="main-header__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-header__item  main-header__item--order">
+          <a class="main-header__link" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="main-header__list-2">
+        <li class="main-header__item  main-header__item--search">
+          <a class="main-header__link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="main-header__item  main-header__item--cart">
+          <a class="main-header__link" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <ul class="main-header__list-3">
+        <li class="main-header__item  main-header--new">
+          <a class="main-header__link" href="#">Новые поступления</a>
+        </li>
+        <li class="main-header__item  main-header--sales">
+          <a class="main-header__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <div class="main-header__info">Бесплатная доставка по России</div>
+    </header>
+    <main>
+      <div class="catalog">
+        <h1 class="catalog__title">Каталог товаров</h1>
+        <div class="catalog__items">
+          <div class="catalog__item">
+            <img class="catalog__product-img" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <h2 class="catalog__item-title">Зайчик-попрыгайчик</h2>
+            <p class="catalog__item-desc">
+              Рост 30 см, вес 200 г
+            </p>
+            <div class="catalog__item-price">
+              1 200 руб.
+            </div>
+            <a href="#" class="btn  btn--catalog-order">Заказать</a>
+          </div>
+          <div class="catalog__item">
+            <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзина для белья" class="catalog__product-img">
+            <h2 class="catalog__item-title">Корзина для белья</h2>
+            <p class="catalog__item-desc">
+              Диаметр 15 см, высота 10 см
+            </p>
+            <div class="catalog__item-price">
+              690 руб.
+            </div>
+            <a href="#" class="btn  btn--catalog-order">Заказать</a>
+          </div>
+          <div class="catalog__item">
+            <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек" class="catalog__product-img">
+            <h2 class="catalog__item-title">Большая корзинка для игрушек</h2>
+            <p class="catalog__item-desc">
+              Диаметр 30 см, высота 30 см
+            </p>
+            <div class="catalog__item-price">
+              1 500 руб.
+            </div>
+            <a href="#" class="btn  btn--catalog-order">Заказать</a>
+          </div>
+        </div>
+        <div class="catalog__order">
+          <h2 class="catalog__order-title">Процесс производства</h2>
+          <img class="catalog__order-img" src="http://placehold.it/260x150" width="260" height="150" alt="видео">
+          <p class="catalog__order-text">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+          </p>
+          <a href="form.html" class="btn  btn--order">Сделать заказ</a>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__logo">
+        <a href="#">
+          <img class="main-footer__logo-tab" src="/img/logo-mobile.svg" width="102" height="34" alt="mishka">
+        </a>
+      </div>
+      <div class="socials">
+        <a class="btn  btn__soc  btn__soc--inst" href="#">YouTube</a>
+        <a class="btn  btn__soc  btn__soc--fb" href="#">Facebook</a>
+        <a class="btn  btn__soc  btn__soc--tw" href="#">Twitter</a>
+      </div>
+      <div class="copyright">
+        <h2 class="copyright__title">Разработано</h2>
+        <div class="copyright__logo">
+        <a href="#">
+          <img class="copyright__logo-img" src="/img/htmlacademy.svg" width="27" height="34" alt="mishka">
+        </a>
+      </div>
+      </div>
+    </footer>
+    <div class="modal-order">
+      <h2 class="modal-order__title">Добавить в корзину</h2>
+      <p class="modal-order__text">выберите размер:</p>
+      <ul class="modal-order__size-list">
+        <li class="modal-order__size-item">S</li>
+        <li class="modal-order__size-item">M</li>
+        <li class="modal-order__size-item">L</li>
+      </ul>
+      <a href="#" class="btn  btn--modal-order">Добавить</a>
+    </div>
+    <script>
+    var headerMain = document.querySelector('.main-header');
+    var headerDropdown = document.querySelector('.main-header__dropdown');
+
+    headerMain.classList.remove('main-header--no-js');
+
+    headerDropdown.addEventListener('click', function() {
+      if (headerMain.classList.contains('main-header--closed')) {
+        headerMain.classList.remove('main-header--closed');
+        headerMain.classList.add('main-header--opened');
+      } else {
+        headerMain.classList.add('main-header--closed');
+        headerMain.classList.remove('main-header--opened');
+      }
+    });
+  </script>
+  </body>
+</html>
